@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
   end
   
   get '/articles/:id' do
-    @article = Article.where
+    @article = Article.find(:id)
   end
   
   post '/articles' do
