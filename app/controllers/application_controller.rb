@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
   end
   
   patch '/articles/:id' do
-    Article.find(params[:id]).update(title: )
+    Article.find(params[:id]).update(title: params[:title], content)
   end
   
   get 'articles/:id/edit' do
