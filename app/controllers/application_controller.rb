@@ -30,7 +30,7 @@ class ApplicationController < Sinatra::Base
   end
   
   delete '/articles/:id' do
-    
+    Article.destroy(params[:id])
   end
   
   get '/articles/:id/edit' do
