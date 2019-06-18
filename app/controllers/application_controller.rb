@@ -27,6 +27,7 @@ class ApplicationController < Sinatra::Base
   
   patch '/articles/:id' do
     puts 'editing@!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+    puts params
     Article.find(params[:id]).update(title: params[:title], content: params[:content]).save
   end
   
